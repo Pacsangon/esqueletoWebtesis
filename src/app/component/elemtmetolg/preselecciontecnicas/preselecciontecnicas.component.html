@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-12">
+
+    <p class="text-justify"> {{parte}}  <em>{{libro}}</em>  {{parte2}} <em>{{libro2}}</em> {{parte3}} <em>{{libro3}}</em> {{parte4}}</p>
+    <p class="text-justify"> {{parrafo}} </p>
+    <p class="text-justify"> {{parrafo2}} </p>
+    <h2> {{subtitulo}} </h2>
+
+    <blockquote class="blockquote text-center">
+      
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Etiquetas</th>			
+            <th scope="col">Inespecífico</th>
+            <th scope="col">Ambas</th>
+            <th scope="col">Específico</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let clasificacion of datosclasificacion">
+            <th scope="row" > {{ clasificacion.pos}}</th>
+            <td  >{{ clasificacion.etiqueta}}</td>
+            <td  >{{ clasificacion.inespecifico}}</td>
+            <td >{{ clasificacion.ambas}}</td>
+            <td >{{ clasificacion.especifico}}</td>
+            <td >{{ clasificacion.total}}</td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+      
+      <footer class="blockquote-footer">Fuente: <cite title="Source Title">{{fuente}}</cite></footer>
+      </blockquote>
+      
+      <p class="text-justify"> {{ parrafo3 }} </p>
+
+
+
+      <br>
+      <h5> {{subtitulo}} </h5>
+      <br>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+        <app-pillspreselecciontecnicas></app-pillspreselecciontecnicas>
+    </div>
+  </div>
+
+  <p class="text-justify"> {{ parrafo4 }} </p>
+
+
+
+  <div>
+    
+  </div>

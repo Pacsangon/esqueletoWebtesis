@@ -1,0 +1,110 @@
+
+<div class="container">
+    <h1 class="text-center"> {{Titulo}} </h1>
+    <p class="text-justify"> {{parrafo}} </p>
+    <h2> {{subtitulo}} </h2>
+    <p class="text-justify">  {{ parrafo2 }} </p>
+    <h3> {{ sub2titulo }} </h3>
+    <p class="text-justify" > {{ parrafo3 }} </p>
+    <p class="text-justify"> {{parrafo4}} </p>
+    <p class="text-justify"> {{parrafo5}} </p>
+    <p class="text-justify"> {{parrafo6}} </p>
+    <p class="text-justify"> <span><strong>{{titulaciondetabla}} </strong></span></p>
+    
+
+    <blockquote class="blockquote text-center">
+    <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tema</th>			
+            <th scope="col">Entrevistada</th>
+            <th scope="col">Preguntas generadoras</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let clasificacion of ordenamiento; index as i">
+            <th scope="row" > {{ i+1}}</th>
+            <td  >{{ clasificacion.tema}}</td>
+            <td  >{{ clasificacion.entrevistada}}</td>
+            <td >
+              <ul *ngFor="let lista of clasificacion.preguntasGeneradoras; index as i">
+                <li>{{ lista}}</li>
+                  <ul *ngIf= "lista[i] === lista[4]">
+                    <li *ngFor="let duda of ordenamiento[2].datosextra; index as i">{{duda}}</li>
+                  </ul>
+                  <ul *ngIf= "lista[i] === lista[5]"    >
+                    <li *ngFor="let duda of ordenamiento[2].datosextra2; index as i">{{duda}}</li>
+                  </ul>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <footer class="blockquote-footer">Fuente: <cite title="Source Title">{{fuente}}</cite></footer>
+      </blockquote>
+
+      <p class="text-justify"> {{parrafo7}} </p>
+      <p class="text-justify"> {{parrafo8}} </p>
+      <p class="text-justify"> {{parrafo9}} </p>
+      <p class="text-justify"> {{parrafo10}} </p>
+
+      <h2>{{subtitulo2}}</h2>
+      <h3 class="text-justify">{{sub2titulo2}}</h3>
+
+
+      <p class="text-justify"> {{parrafo11}} </p>
+      <p class="text-justify"> {{parrafo12}} </p>
+      <p class="text-justify"> {{parrafo13}} </p>
+
+      <h3 class="text-justify">{{sub2titulo3}}</h3>
+
+      <p class="text-justify"> {{parrafo14}} </p>
+      <p class="text-justify"> {{parrafo15}} </p>
+      <p class="text-justify"> {{parrafo16}} </p>
+      <p class="text-justify"> {{parrafo17}} </p>
+      <p class="text-justify"> {{parrafo18}} </p>
+      <p class="text-justify"> {{parrafo19}} </p>
+      <p class="text-justify"> {{parrafo20}} </p>
+
+      <h3 class="text-justify">{{sub2titulo4}}</h3>
+
+      <p class="text-justify"> {{parrafo21}} </p>
+      <p class="text-justify"> {{parrafo22}} </p>
+      <p class="text-justify"> {{parrafo23}} </p>
+      <p class="text-justify"> {{parrafo24}} </p>
+      <p class="text-justify"> {{parrafo25}} </p>
+
+      <h3 class="text-justify">{{sub2titulo5}}</h3>
+
+      <p class="text-justify"> {{parrafo26}} </p>
+      <p class="text-justify"> {{parrafo27}} </p>
+
+      <h3 class="text-justify">{{sub2titulo6}}</h3>
+
+      <p class="text-justify"> {{parrafo28}} </p>
+      <p class="text-justify"> {{parrafo29}} </p>
+      <p class="text-justify"> {{parrafo30}} </p>
+      <p class="text-justify"> {{parrafo31}} </p>
+
+      <h2>{{subtitulo3}}</h2>
+      <p class="text-justify"> {{parrafo32}} </p>
+      <p class="text-justify"> {{parrafo33}} </p>
+      <p class="text-justify"> {{parrafo34}} </p>
+      <p class="text-justify"> {{parrafo35}} </p>
+      <p class="text-justify"> {{parrafo36}} </p>
+      <p class="text-justify"> {{parrafo37}} </p>
+      <p class="text-justify"> {{parrafo38}} </p>
+      <p class="text-justify"> {{parrafo39}} </p>
+      <p class="text-justify"> {{parrafo40}} </p>
+      <p class="text-justify"> {{parrafo41}} </p>
+      <p class="text-justify"> {{parrafo42}} </p>
+
+      <h2>{{subtitulo4}}</h2>
+
+      <p class="text-justify"> {{parrafo43}} </p>
+      <p class="text-justify"> {{parrafo44}} </p>
+      <p class="text-justify"> {{parrafo45}} </p>
+
+
+</div>

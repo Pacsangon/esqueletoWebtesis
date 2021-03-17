@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col">
+
+    <p class="text-justify"> {{parrafo}} </p>
+    <h2 class="text-justify">{{titulo}}</h2>
+    <p class="text-justify"> {{parrafo2}} </p>
+    <ul *ngFor="let lista of data">
+      <li > <a [routerLink]="['/ejercicio',lista.Id]">{{lista.nombre}}</a></li>     
+    </ul>
+    <p class="text-justify"> {{parrafo3}} </p>
+    <h2 class="text-justify">{{titulo2}}</h2>
+    
+    <p class="text-justify"> {{parrafo4}} </p>
+    <p class="text-justify"> {{parrafo5}} </p>
+    <p class="text-justify"> {{parrafo6}} </p>
+    <ul>
+      <li>{{lista3}}</li>
+      <li>{{lista4}}</li>
+      <li>{{lista5}}</li>
+      <li>{{lista6}}</li>
+      <li>{{lista7}}</li>
+      <li>{{lista8}}</li>
+      <li>{{lista9}}</li>
+    </ul>
+  <p class="text-justify"> {{parrafo7}} </p>
+    
+    
+    </div>
+</div>

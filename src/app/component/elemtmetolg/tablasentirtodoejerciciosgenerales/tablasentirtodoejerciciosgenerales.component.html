@@ -1,0 +1,33 @@
+<div class="col-md-12 table-responsive-sm table-responsive-lg">
+
+  <table class="table table-bordered table-striped table-hover" [mfData]="data| filtroDatos : filterQuery" #mf="mfDataTable"
+    [mfRowsOnPage]="rowsOnPage" [(mfSortBy)]="sortBy" [(mfSortOrder)]="sortOrder">
+    <thead class="thead-inverse">
+      <tr>
+        <th colspan="5" class="text-center">
+          Buscar por nombre:
+          <input class="form-control" [(ngModel)]="filterQuery" />
+        </th>
+      </tr>
+      <tr>
+        <th style="width: 100%" class="text-center">
+          <mfDefaultSorter by="nombre">Nombre</mfDefaultSorter>
+        </th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of mf.data">
+        <td class="text-center"><a [routerLink]="['/ejercicio',item.Id]">{{item.nombre}}</a></td>
+        
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">
+          <mfBootstrapPaginator [rowsOnPageSet]="[5,10]"></mfBootstrapPaginator>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

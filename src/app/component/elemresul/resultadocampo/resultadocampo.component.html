@@ -1,0 +1,107 @@
+  <div class="col">
+    <ngb-tabset type="pills" justify="justified">
+      <ngb-tab  title=" {{  tituloAniretake}} " >
+        <ng-template ngbTabContent>
+          <h1>{{ tituloAniretake}}</h1>
+          <p class="text-justify" >{{ parrafoaniretake}}</p>
+          <p class="text-justify" >{{ parrafoaniretake2}}</p>
+          <p class="text-justify" >{{ parrafoaniretake3}}</p>
+          <p class="text-justify" >{{ tituloAniretake}}</p>
+        </ng-template>
+      </ngb-tab>
+     
+      <ngb-tab>
+        <ng-template ngbTabTitle ><b>{{tituloAntonia}}</b> </ng-template>
+        <ng-template ngbTabContent>
+          <H1>{{historiaAntonia}}</H1>
+          <p class="text-justify"> {{parrafoAntonia}}</p>
+          <p class="text-justify"> {{parrafoAntonia2}}</p>
+          <p class="text-justify"> {{parrafoAntonia3}}</p>
+          <p class="text-justify"> {{parrafoAntonia4}}</p>
+          <p class="text-justify"> {{parrafoAntonia5}}</p>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab>
+        <ng-template ngbTabTitle><b>{{tituloGeorgeanella}}</b> </ng-template>
+        <ng-template ngbTabContent>
+          <p class="text-justify">{{historiaGeorgeanella}}</p>
+          <p class="text-justify"> {{parrafoGeorgeanella}}</p>
+          <p class="text-justify"> {{parrafoGeorgeanella2}}</p>
+          <p class="text-justify"> {{parrafoGeorgeanella3}}</p>
+          <p class="text-justify"> {{parrafoGeorgeanella4}}</p>
+          <p class="text-justify"> {{parrafoGeorgeanella5}}</p>
+          <p class="text-justify"> {{parrafoGeorgeanella6}}</p>
+          <p class="text-justify"> {{tituloGeorgeanella}}</p>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab>
+        <ng-template ngbTabTitle><b>{{tituloLaMedusa}}</b> </ng-template>
+        <ng-template ngbTabContent>
+          <h2>{{historiaLaMedusa}}</h2>
+          <p class="text-justify"> {{parrafoLaMedusa}}</p>
+          <p class="text-justify"> {{parrafoLaMedusa2}}</p>
+          <p class="text-justify"> {{parrafoLaMedusa3}}</p>
+          <p class="text-justify"> {{parrafoLaMedusa4}}</p>
+          <p class="text-justify"> {{parrafoLaMedusa5}}</p>
+          <p class="text-justify"> {{tituloLaMedusa}}</p>
+
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab>
+        <ng-template ngbTabTitle><b>{{tituloLunadeSanJorge}}</b> </ng-template>
+        <ng-template ngbTabContent>
+          <div class="container">
+            <app-ngb-carousel></app-ngb-carousel>
+          <div class="row">
+            <div class="col-12">
+            <audio src="./assets/audio/audios/explicación de las fotos.mp3" preload="auto" controls controlslist="nodownload" autoplay>
+              <p>Tu navegador no implementa el elemento audio</p>
+            </audio>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <h2 class="text-center">Intervención del texto</h2>
+              <img src="./assets/img/imagenescarrusel/Luna de San Jorge/Relato - caja de herramientas Luna de San Jorge.jpg"  class="img-fluid" alt="Random third slide">
+            </div>
+            <div class="col-12">
+              <audio src="./assets/audio/audios/texto.mp3" preload="auto" controls controlslist="nodownload">
+                <p>Tu navegador no implementa el elemento audio</p>
+              </audio>
+            </div>
+          </div>
+
+
+          </div>
+          
+          
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab>
+        <ng-template ngbTabTitle><b>{{tituloNigromante}}</b> </ng-template>
+        <ng-template ngbTabContent>
+          <h4>{{subtitulo}}</h4>
+          <p class="text-justify" >{{texto}}</p>
+          <h4>{{subtitulob}}</h4>
+          <p class="text-justify" >{{textob}}</p>
+          <h4>{{subtituloc}}</h4>
+          <p class="text-justify" >{{textoc}}</p>
+          <h4>{{subtitulod}}</h4>
+          <p class="text-justify" >{{textod}}</p>
+          <h4>{{subtituloe}}</h4>
+          <p class="text-justify" >{{textoe}}</p>
+          <p class="text-justify" >{{tituloNigromante}}</p>
+        </ng-template>
+      </ngb-tab>
+      
+    </ngb-tabset>
+
+    <a href="./assets/productos/Resultados.pdf" target=”_blank”> Versión impresa de las Historias</a>
+
+
+  </div>
+
+
+
+
+

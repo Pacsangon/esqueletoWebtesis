@@ -1,0 +1,16 @@
+<div class="jumbotron">
+  <h1 class="display-4 text-center">Resultado de su búsquedad: </h1>
+  <hr class="my-4">
+  <ul class="list-group" *ngFor="let ejercicio of ejercicio">
+    <li class="list-group-item text-center"><a [routerLink]="['/ejercicio',ejercicio.Id]" >{{ejercicio.nombre}}</a></li>
+  </ul>
+</div>
+
+
+<p>
+  <ngb-alert type="danger" [dismissible]="false" [ngClass]="{visible: ejercicio.length === 0,invisible: !(ejercicio.length === 0)}">
+    No se encuentra ningún ejercicio con esta(s) letra(s)  {{criteriobusquedad}} o no puso nada en el buscador.
+  </ngb-alert>
+</p>
+
+<a class="bg-dark btn  btn-outline-info my-2 my-sm-0" [routerLink]="['/metodologia']">Volver</a>

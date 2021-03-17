@@ -1,0 +1,174 @@
+
+<p class="text-justify"> {{parrafo}} </p>
+<p class="text-justify"> {{parrafo2}} </p>
+<p class="text-justify"> {{parrafo3}} </p>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+
+<ngb-tabset justify="fill">
+ 
+  <ngb-tab title="Encuadre">
+    <ng-template ngbTabContent>
+
+      <p class="text-justify"> {{parrafo4}} </p>
+      <p class="text-justify"> {{parrafo5}} </p>
+      <h3 class="text-center"> {{subtitulo}} </h3>
+
+      <ul>
+        <li><p class="text-justify"> {{parrafo6}} </p></li>
+        <li><p class="text-justify"> {{parrafo7}} </p></li>
+        <li><p class="text-justify"> {{parrafo8}} </p></li>
+        <li><p class="text-justify"> {{parrafo9}} </p></li>
+        <li><p class="text-justify"> {{parrafo10}} </p></li>
+        <li><p class="text-justify"> {{parrafo11}} </p></li>
+        <li><p class="text-justify"> {{parrafo12}} </p></li>
+        <li><p class="text-justify"> {{parrafo13}} </p></li>
+        <li><p class="text-justify"> {{parrafo14}} </p></li>
+        <li><p class="text-justify"> {{parrafo15}} </p></li>
+      </ul>
+
+      <h3 class="text-center"> {{subtitulo2}} </h3>
+
+      <p class="text-justify"> {{parrafo16}} </p>
+      <p class="text-justify"> {{parrafo17}} </p>
+
+      <h3 class="text-center"> {{subtitulo3}} </h3>
+      <div class="text-center">
+        <img src="{{imagen}}" class="img-fluid" alt="Responsive image">
+      </div>
+      
+      <p class="text-justify"> {{parrafo18}} </p>
+      <p class="text-justify"> {{parrafo19}} </p>
+      <p class="text-justify"> {{parrafo20}} </p>
+
+      <h3 class="text-center"> {{subtitulo5}} </h3>
+      <p class="text-justify"> {{parrafo27}} </p>
+      <p class="text-justify"> {{parrafo28}} </p>
+      <p class="text-justify"> {{parrafo29}} </p>
+      <p class="text-justify"> {{parrafo30}} </p>
+      <p class="text-justify"> {{parrafo31}} </p>
+      <p class="text-justify"> {{parrafo32}} </p>
+      <p class="text-justify"> {{parrafo33}} </p>
+
+      
+
+
+
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title= "Guía en la Formulación del Caldeamiento / Criterios de Elección Entre los Ejercicios">
+    
+    <ng-template ngbTabContent>
+      <div class="rol">
+        <h3 class="text-center"> {{subtitulo4}} </h3>
+        <p class="text-justify"> {{parrafo21p1}} {{parrafo21p2}} {{parrafo21p3}} {{parrafo21p4}} {{parrafo21p5}}</p>
+        <p class="text-justify"> {{parrafo22}} </p>
+        <p class="text-justify"> {{parrafo23}} </p>
+        <p class="text-justify"> {{parrafo24}} </p>
+
+        <p class="text-justify"> <span><strong>{{tabulacion}} </strong></span></p>
+
+        <blockquote class="blockquote text-center">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Categorias</th>			
+              <th scope="col">Preguntas generadoras</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let clasificacion of clasificaciondeejerciciosparaelcaldeamiento; index as i">
+              <th scope="row" > {{ i+1}}</th>
+              <td >{{ clasificacion.categoria}}</td>
+              <td >
+                <ul *ngFor="let lista of clasificacion.series; index as i">
+                  <li>{{ lista}}</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <footer class="blockquote-footer">Fuente: <cite title="Source Title">{{fuente}}</cite></footer>
+        </blockquote>
+
+        <app-acordioncriteriosej></app-acordioncriteriosej>
+
+        <p class="text-justify"> {{parrafo25}} </p>
+        <p class="text-justify"> {{parrafo26}} </p>
+    
+
+
+
+
+      </div>
+       
+
+    </ng-template>
+  </ngb-tab>
+  <ngb-tab title= "Diagrama de flujo">
+    
+    <ng-template ngbTabContent>
+      <div class="rol">
+
+
+        <p class="text-justify"> {{parrafo34}} </p>
+    
+      
+      <button type="button"  class="btn  btn-lg btn-block btn-outline-success" (click) ="diagramapositivo()"  [disabled]="status1">Llegaron personas
+        para realizar la sesión inicial...</button>
+      <button type="button"  class="btn  btn-lg btn-block btn-outline-danger" (click) = "diagramanegativo()" [disabled]="status2" >No llegaron personas
+        para realizar la sesión inicial....</button>
+    
+    <p class="text-justify" [style.visibility] = "positivoa ? 'visible' : 'hidden'">{{resultado1sesioninicial}}</p>
+    <p class="text-justify" [style.visibility] = "negativoa ? 'visible' : 'hidden'">{{resultado2sesioninicial}}</p>
+
+    <p class="text-justify"> {{parrafo35}} </p>
+    <button type="button" id='jaid' class="btn btn-lg btn-block btn-outline-success" (click) ="diagramapositivo2()" [disabled]="status3">Hay historias...</button>
+    <button type="button" id='jeid' class="btn btn-lg btn-block btn-outline-danger" (click) = "diagramanegativo2()" [disabled]="status4">No hay historias...</button>
+    <p class="text-justify" [style.visibility] = "positivob ? 'visible' : 'hidden'">{{resultado1historias}}</p>
+    <p  class="text-justify" [style.visibility] = "negativob ? 'visible' : 'hidden'">{{resultado2historias}}</p>
+
+    <p class="text-justify"> {{parrafo36}} </p>
+    <button type="button" id='jiid' class="btn btn-lg btn-block btn-outline-success" (click) ="diagramapositivo3()" [disabled]="status5">Si se cumplen con las sesiones de
+      trabajo...</button>
+    <button type="button" id='joid' class="btn btn-lg btn-block btn-outline-danger" (click) = "diagramanegativo3()" [disabled]="status6">Si no se cumplen con todas las
+      sesiones de trabajo...</button>
+    <p class="text-justify" [style.visibility] = "positivoc ? 'visible' : 'hidden'">{{resultado1evaluacion}}</p>
+    <p  class="text-justify" [style.visibility] = "negativoc ? 'visible' : 'hidden'">{{resultado2evaluacion}}</p>
+
+
+    <button type="button" id='juid' class="btn btn-lg btn-block btn-outline-success" (click) ="diagramapositivo4()" [disabled]="status7">Retroalimentación ideal...</button>
+    <button type="button" id='jqid' class="btn btn-lg btn-block btn-outline-danger" (click) = "diagramanegativo4()" [disabled]="status8">No obstante...</button>
+    <p id="resretro" class="text-justify" [style.visibility] = "positivod ? 'visible' : 'hidden'">{{r1retroalimentacion}}</p>
+    <p  class="text-justify" [style.visibility] = "negativod ? 'visible' : 'hidden'">{{r2retroalimentacion}}</p>
+    
+      <ul>
+        <p class="text-justify">Aspectos para recordar</p>
+        <li>
+          <p class="text-justify">La evaluación es constante en las sesiones de trabajo.</p>
+        </li>
+        <li>
+          <p class="text-justify">Siempre se puede participar en la retroalimentación, si hay material de la persona.</p>
+        </li>
+      </ul>
+    
+
+
+
+
+      </div>
+       
+
+    </ng-template>
+  </ngb-tab>
+  
+</ngb-tabset>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
